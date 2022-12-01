@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-image: url(./images/background.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .decorate {
+      width: 360px;
+      height: 290px;
+      background-image: url(./images/decorate.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 10%;
+      left: 15%;
+      transform: rotate(-10deg);
+      text-align: center;
+      line-height: 290px;
+    }
+
+    .mascot {
+      width: 200px;
+      height: 225px;
+      background-image: url(./images/mascot.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      filter: drop-shadow(3px 0 5px rgba(0, 0, 0, 0.5));
+      top: 80%;
+      left: 100%;
+      animation: move 7s ease-in-out infinite;
+    }
+
+    @keyframes move {
+      from {
+        transform: translate(0);
+      }
+
+      50% {
+        transform: translateX(-500px) scale(200%) translateY(-60px) rotate(10deg);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+
+
+
+    table {
+      box-sizing: border-box;
+      width: 450px;
+      height: 600px;
+      text-align: center;
+      position: absolute;
+      padding: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* border: 1px solid black; */
+      /* font-family: 'Just Me Again Down Here', cursive; */
+      font-family: 'Fredoka One', cursive;
+      font-size: 40px;
+      border-radius: 20px;
+      background: rgb(175, 145, 120);
+      color: white;
+      box-shadow: 0 0 1px 10px rgba(225, 220, 205, 0.9), 0 0 15px 15px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+
+    tr {
+      /* border: 1px solid white; */
+      /* border-radius: 50%; */
+      width: 100px;
+      height: 100px;
+
+    }
+
+    td {
+      /* border: 1px solid white; */
+      /* border-radius: 50%; */
+      width: 100px;
+      height: 100px;
+    }
+
+    #text {
+      font-size: 50px;
+      padding-right: 40px;
+      padding-left: 40px;
+      text-align: right;
+      border-radius: 20px;
+      /* border: 1px solid white; */
+      color: rgb(175, 145, 120);
+      background-image: url(./images/text.png);
+      background-size: cover;
+      letter-spacing: 1.5px;
+      overflow: hidden;
+    }
+
+
+    .single01 {
+      background-image: url(./images/single01.png);
+      background-size: cover;
+      color: rgb(175, 145, 120);
+    }
+
+    .single01:active {
+      background-image: url(./images/single01-1.png);
+      background-size: cover;
+      font-size: 30px;
+      color: rgb(225, 220, 205);
+      top: 50px;
+    }
+
+    .single02 {
+      background-image: url(./images/single02.png);
+      background-size: cover;
+      color: rgb(175, 145, 120);
+    }
+
+    .single02:active {
+      background-image: url(./images/single02-1.png);
+      background-size: cover;
+      font-size: 30px;
+      color: rgb(225, 220, 205);
+      top: 50px;
+    }
+
+    .single03 {
+      background-image: url(./images/single03-1.png);
+      background-size: cover;
+      color: rgb(175, 145, 120);
+    }
+
+    .single03:active {
+      background-image: url(./images/single03-2.png);
+      background-size: cover;
+      font-size: 30px;
+      color: rgb(225, 220, 205);
+    }
+
+    .single04 {
+      background-image: url(./images/single04.png);
+      background-size: cover;
+      color: rgb(175, 145, 120);
+    }
+
+    .single04:active {
+      background-image: url(./images/single04-1.png);
+      background-size: cover;
+      font-size: 30px;
+      color: rgb(225, 220, 205);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="decorate"></div>
+  <div class="mascot"></div>
+  <table>
+    <tr>
+      <td colspan="4" id="text">0</td>
+    </tr>
+    <tr>
+      <td class="single02">C</td>
+      <td class="single02">/</td>
+      <td class="single02">*</td>
+      <td class="single02">-</td>
+    </tr>
+    <tr>
+      <td class="single01">7</td>
+      <td class="single01">8</td>
+      <td class="single01">9</td>
+      <td class="single03" rowspan="2">+</td>
+    </tr>
+    <tr>
+      <td class="single01">4</td>
+      <td class="single01">5</td>
+      <td class="single01">6</td>
+    </tr>
+    <tr>
+      <td class="single01">1</td>
+      <td class="single01">2</td>
+      <td class="single01">3</td>
+      <td class="single03" rowspan="2">=</td>
+    </tr>
+    <tr>
+      <td class="single04" colspan="2">0</td>
+      <td class="single01">.</td>
+    </tr>
+  </table>
+
+  <!-- JS --------------------->
+  <script>
+
+    const text = document.getElementById('text')
+    const btns = document.querySelectorAll('td:not(#text)')
+
+    for (const btn of btns) {
+      btn.onclick = () => {
+        const brnText = btn.innerText
+        if (brnText === '=') {
+          text.innerText = eval(text.innerText)
+        } else if (brnText === 'C') {
+          text.innerText = '0'
+        } else {
+          if (text.innerText === '-' && isNaN(parseInt(brnText))) return
+          if (text.innerText !== '0') {
+            text.innerText += brnText
+          } else if (!['+', '*', '/'].includes(brnText)) {
+            text.innerText = brnText
+          }
+        }
+      }
+    }
+
+    document.onkeydown = event => {
+      const brnText = event.key
+      if (brnText === 'Enter' || brnText === '=') {
+        text.innerText = eval(text.innerText)
+      } else if (brnText === 'C') {
+        text.innerText = '0'
+      } else {
+        if (text.innerText === '-' && isNaN(parseInt(brnText))) return
+        if (text.innerText !== '0') {
+          text.innerText += brnText
+        } else if (!['+', '*', '/'].includes(brnText)) {
+          text.innerText = brnText
+        }
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
